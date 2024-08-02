@@ -1,0 +1,214 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>文到圖擴散模型提示詞視覺化分析</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css">
+	<link rel="stylesheet" type="text/css" href="css/landing-page.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+	<link rel="stylesheet" type="text/css" href="css/styleTest.css">
+</head>
+
+<body>
+	<!----------------------------------- Dividing line----------------------------------------------------->
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand topnav" href="https://myweb.ntut.edu.tw/~tjhsieh/">
+                ♪ 國立臺北科技大學 ♪ 資訊工程系 ♪ 計算機圖學實驗室 ♪</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#top">回頂端</a>
+                    </li>
+					<li>
+                        <a href="#demo1">摘要</a>
+                    </li>
+					<li>
+                        <a href="#demo2">引用文獻</a>
+                    </li>
+                    <li>
+                        <a href="#demo3">示範</a>
+                    </li>
+					
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="top"></a>
+    <div class="intro-header">
+        <div class="container" style="height:350px;">
+
+            <div class="row">
+                <div class="col-lg-12" style="height:300px;">
+                    <div class="intro-message" style="position: relative;padding-top: 0%;padding-bottom: 70%;">
+                        <h1>文到圖擴散模型提示詞視覺化分析</h1>
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="demo.html" class="btn btn-default btn-lg"> 
+                                    <span class="network-name" style="font-weight: 900;">進 入 系 統</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+	<a  name="demo1"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+					<h2 class="section-heading">摘要</h2>
+					<p class="lead">
+                        為了能讓以變換器為文字編碼器的文字生成圖片模型正確生成出對應內容圖片，本研究提出一個以判別器架構分析圖片中是否包含特定提示詞內容之系統，藉由分析圖片庫中大量圖片並將其結果進行統計歸納，提供給模型訓練者其模型是否在特定輸入文字上的表現有缺點之資訊。
+                        本研究以Stable Diffusion此模型為實驗對象，並收集社群上模型訓練者預訓練好的權重用於生成實驗用圖片，通過實驗分析推論出該權重之文字編碼器能否對輸入文字萃取出能產生預期效果圖片的特徵；
+                        尤其變換器架構對於文字間的關係及微小差異特別敏感，對於文字生成圖片產生的非預期結果缺乏能絕對溯源的方法，因此期望能以判別器產出的分析結果之交叉比對推導哪些提示詞的組合將導致部分提示詞被編碼器錯誤理解。
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="img/dog.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a  name="demo2"></a>	
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">說明</h2>
+					<p class="lead">
+                        文生圖模型經常遇到生成圖片忽略輸入提示的情況，此情況的發生具有偶然性，並且在輸入提示較多時更常發生。
+                        模型使用者往往需要多次嘗試才可產生無提示缺失的圖片，僅圖片內容與提示相符與理想狀況可能還有巨大差異。
+                        而模型開發者也難以在眾多提示中找出容易導致內容錯誤的組合。<br>
+                        本研究提出一個以判別器對生成圖片分析以歸納出該模型缺陷，主要是以分析哪些提示組合下有更高比率被擴散模型忽略部分提示。
+                        本研究以Stable Diffusion為實驗對象，由該擴散模型生成的圖片將被儲存至圖片庫。
+                        Discriminator的訓練以及分析用的樣本皆是取自於該圖片庫，此方法能省去手動標記圖片及資料收集的繁瑣步驟。
+                        判別器原為鑑定圖片是否為人工生成對抗網路生成之圖片，本研究將其作為識別圖片中是否包含特定提示之內容的回歸模型。
+                        藉由判別器對輸入圖片給出是否包含特定提示之信心分數，可再額外計算其正確率、假陽性及假陰性等比率。
+                        將上述的分析數據以輸入圖片之提示進行分組，將各組個別進行統計可得出在不同提示組合下生成之圖片與提示的匹配。<br>
+                        Stable Diffusion的權重"Checkpoint"，不論是使用者於網路社群上下載，或訓練者自行訓練。
+                        本研究主旨在幫助人們檢驗挑選之Checkpoint之生成圖片，因此能讓使用者直覺地檢視分析結果至關重要。
+                        本研究的系統中提供多種視覺化圖表以供檢視，這是為了讓關鍵數據一目了然。
+                        在將數據以圖表顯示前將其正規化以讓圖表的對比更大，以顏色凸顯數據的數值等方法皆系統中使用。
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="img/ipad.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+	
+	<a name="demo3"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+					<h2 class="section-heading">示範</h2>
+					<p class="lead">內文內文內文內文內文內文內文內文內文內文</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="img/phones.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+	
+
+	
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-12">
+                    <hr>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small">
+			論文題目，
+
+            由<a xmlns:cc="http://creativecommons.org/ns#" href="http://www.cc.ntut.edu.tw/~tjhsieh/" property="cc:attributionName" rel="cc:attributionURL">國立臺北科技大學資訊工程系計算機圖學實驗室</a>製作，
+			以<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>釋出。
+			姓名標示-非商業性-相同方式分享 CC BY-NC-SA
+			本授權條款允許使用者對本著作進行重混、調整，以及依原著作建立新著作，但僅限於非商業目的之使用。唯使用者就其新創著作，必須按照表彰
+			原作：國立臺北科技大學資訊工程系計算機圖學實驗室，並且將產出之新創著作採用相同的授權條款釋出。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="lib/jquery-2.1.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="lib/bootstrap.min.js"></script>
+
+	
+	
+	
+	
+	
+</body>
+</html>
