@@ -97,7 +97,13 @@
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class="img-responsive" src="img/main_image.png" alt="">
+                    本研究的視覺化界面總覽。
+                    (A)：不同提示數量對生成圖片影響下的分析數據，以直方圖表示。
+                    (B)：提示間關聯對圖片影響的分析結果,以衛星圖表示。
+                    ©：將圖中(B)處資料以二維分佈圖形式展示。
+                    (D)以有顏色的直條圖顯示分析結果的好壞。
+                    (E)單一圖片各別的分析結果。
                 </div>
             </div>
 
@@ -119,13 +125,16 @@
 					<p class="lead">
                         文生圖模型經常遇到生成圖片忽略輸入提示的情況，此情況的發生具有偶然性，並且在輸入提示較多時更常發生。
                         模型使用者往往需要多次嘗試才可產生無提示缺失的圖片，僅圖片內容與提示相符與理想狀況可能還有巨大差異。
-                        而模型開發者也難以在眾多提示中找出容易導致內容錯誤的組合。<br>
+                        而模型開發者也難以在眾多提示中找出容易導致內容錯誤的組合。
+                        <br><br>
                         本研究提出一個以判別器對生成圖片分析以歸納出該模型缺陷，主要是以分析哪些提示組合下有更高比率被擴散模型忽略部分提示。
                         本研究以Stable Diffusion為實驗對象，由該擴散模型生成的圖片將被儲存至圖片庫。
+                        <br><br>
                         Discriminator的訓練以及分析用的樣本皆是取自於該圖片庫，此方法能省去手動標記圖片及資料收集的繁瑣步驟。
                         判別器原為鑑定圖片是否為人工生成對抗網路生成之圖片，本研究將其作為識別圖片中是否包含特定提示之內容的回歸模型。
                         藉由判別器對輸入圖片給出是否包含特定提示之信心分數，可再額外計算其正確率、假陽性及假陰性等比率。
-                        將上述的分析數據以輸入圖片之提示進行分組，將各組個別進行統計可得出在不同提示組合下生成之圖片與提示的匹配。<br>
+                        將上述的分析數據以輸入圖片之提示進行分組，將各組個別進行統計可得出在不同提示組合下生成之圖片與提示的匹配。
+                        <br><br>
                         Stable Diffusion的權重"Checkpoint"，不論是使用者於網路社群上下載，或訓練者自行訓練。
                         本研究主旨在幫助人們檢驗挑選之Checkpoint之生成圖片，因此能讓使用者直覺地檢視分析結果至關重要。
                         本研究的系統中提供多種視覺化圖表以供檢視，這是為了讓關鍵數據一目了然。
@@ -134,7 +143,14 @@
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/ipad.png" alt="">
+                    <img class="img-responsive" src="img/image_base.PNG" alt="">
+                    <img class="img-responsive" src="img/main_result.PNG" alt="">
+                    <img class="img-responsive" src="img/single_image_result.PNG" alt="">
+                    <!--
+                    <img class="img-responsive" src="img/prompt_map.PNG" alt="">
+                    <img class="img-responsive" src="img/prompt_number_chart.PNG" alt="">
+                    <img class="img-responsive" src="img/hex_chart_result.PNG" alt="">
+                    -->
                 </div>
             </div>
 
@@ -152,8 +168,10 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-					<h2 class="section-heading">示範</h2>
-					<p class="lead">內文內文內文內文內文內文內文內文內文內文</p>
+					<h2 class="section-heading">論文影片</h2>
+					<p class="lead">
+                        內文內文內文內文內文內文內文內文內文內文
+                    </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
